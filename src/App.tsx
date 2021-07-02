@@ -4,7 +4,7 @@ import {
   QueryClientProvider,
 } from 'react-query';
 import './App.css';
-import Home from './sections/home/index';
+import Creatures from './sections/Creatures';
 
 const queryClient = new QueryClient()
 
@@ -12,7 +12,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <div className="App">
-        <Home />
+        <Creatures />
     </div>
     </QueryClientProvider>
   );
