@@ -1,18 +1,14 @@
-import { useQuery } from 'react-query';
+import { useCreatures } from './hooks';
 
 const Creatures = () => {
-  const { data: response, isLoading } = useQuery('gameList', () => {
-    return fetch("https://botw-compendium.herokuapp.com/api/v2", {
-      "method": "GET",
-    })
-  }, {
-    refetchOnWindowFocus: false,
-  });
+  const { data: response, isLoading } = useCreatures();
 
-  const info = response?.json();
+  const foodCreatures = response?.data?.food;
+
   return(<section>
     <h2>Creatures</h2>
     {isLoading && (<p>Is loading, hold on </p>)}
+    {foodCreatures && foodCreatures.map(creature => (<p key={creature.id}>{creature.name}</p>))}
   </section>);
 };
 
