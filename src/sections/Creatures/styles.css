@@ -27,38 +27,20 @@ img {
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
     .creatures-container {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr)
     }
     .card-wrapper {
         border: 2px solid red;
     }
 }
 
-@media screen and (min-width: 2200px) {
+@media screen and (min-width: 1400px) {
     .creatures-container {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(6, 1fr)
     }
     .card-wrapper {
-        border: 2px solid greenyellow;
-    }
-}
-
-@media screen and (min-width: 3200px) {
-    .creatures-container {
-        grid-template-columns: repeat(6, 1fr);
-    }
-    .card-wrapper {
-        border: 2px solid greenyellow;
-    }
-}
-
-@media screen and (min-width: 4200px) {
-    .creatures-container {
-        grid-template-columns: repeat(8, 1fr);
-    }
-    .card-wrapper {
-        border: 2px solid greenyellow;
+        border: 2px solid red;
     }
 }
