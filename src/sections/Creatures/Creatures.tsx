@@ -1,4 +1,5 @@
 import { useCreatures } from './hooks';
+import Hearts from './Hearts';
 import './styles.css';
 
 const Creatures = () => {
@@ -18,8 +19,9 @@ const Creatures = () => {
         <img src={creature.image} alt={creature.name} />
         <p>
           <span>ID: {creature.id}</span>
-          <span>Hearts recovered: {creature.hearts_recovered}</span>
+          <span>Hearts recovered: {<Hearts hearts={creature.hearts_recovered} />}</span>
         </p>
+        
         <p>Description: {creature.description}</p>
         <p>Cooking effect: {creature.cooking_effect}</p>
         <p>Where to find them?</p>
