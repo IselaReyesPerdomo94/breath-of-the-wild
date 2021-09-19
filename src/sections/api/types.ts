@@ -29,4 +29,4 @@ type CreaturesResponse = {
 }
 
 export { Categories };
-export type { CreaturesResponse };
+export type { CreaturesResponse, FoodCreature, NonFoodCreature };
